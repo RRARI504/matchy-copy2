@@ -12,19 +12,36 @@
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var animal = {};
 
+animal.species = 'Dog';
+animal['name'] = 'Rex'
+animal.noises = [];
+console.log(animal);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var noises = [];
+noises[0] = 'bark';
+noises.push('meow');
+noises.unshift('hiss');
+noises.splice(1, 0, 'purr');
+
+console.log(noises.length)
+console.log(noises.length - 1)
+console.log(noises)
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+animal.noises = noises
+noises.push('BRrr')
+console.log(animal)
 
 
 /* *******************************************************************
@@ -50,8 +67,32 @@
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var animals = [];
+animals.push(animal)
+console.log(animals)
 
+let duck = { 
+  species: 'duck',
+  name: 'Jerome', 
+  noises: ['quack', 'honk', 'sneeze', 'woosh'] 
+}
+animals.push(duck);
+console.log(animals);
 
+let rooster = {
+  species: 'rooster',
+  name: 'RIDER',
+  noises: ['CockAdoodle', 'wakeuP', 'CRRRR']
+}
+
+let rat = {
+  species: 'rat',
+  name: 'ashlee',
+  noises: ['AHH', "Ya moma", 'BArk']
+}
+
+animals.push(rooster, rat);
+console.log(animals);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
