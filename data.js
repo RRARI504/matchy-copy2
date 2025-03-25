@@ -97,8 +97,17 @@ console.log(animals);
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//a good data structure for list is an array
+
+var friends = [];//empty array for friends 
+function getRandom(animals){ //funtion that gets random index of animals array
+  return Math.floor(Math.random() * animals.length);
+}
+
+let ranD = getRandom(animals)
 
 
+console.log(friends)
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
  * move onto Part 2 in the file called "functions.js"
