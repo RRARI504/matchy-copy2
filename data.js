@@ -105,9 +105,10 @@ function getRandom(animals){ //funtion that gets random index of animals array
 }
 
 let ranD = getRandom(animals)
-
-
+friends.push(animals[ranD].name)
 console.log(friends)
+
+animals
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
  * move onto Part 2 in the file called "functions.js"
