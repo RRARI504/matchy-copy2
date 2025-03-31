@@ -102,13 +102,16 @@ console.log(animals);
 var friends = [];//empty array for friends 
 function getRandom(animals){ //funtion that gets random index of animals array
   return Math.floor(Math.random() * animals.length);
+  //math.random gets a random number between 1 and 10 
+  //math.floor rounds number to nearest integer
+  // Combining these functions allows generating random integers within a specific range. 
 }
 
 let ranD = getRandom(animals)
 friends.push(animals[ranD].name)
 console.log(friends)
 
-animals
+animals[ranD]['friends'] = friends
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
  * move onto Part 2 in the file called "functions.js"
