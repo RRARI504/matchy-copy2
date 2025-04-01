@@ -108,7 +108,9 @@ function getRandom(animals){ //funtion that gets random index of animals array
 }
 
 let ranD = getRandom(animals)
+//set variable equal to invokation of the getRandom function with our animals array as a parameter
 friends.push(animals[ranD].name)
+//push the result of the random animals name to the output
 console.log(friends)
 
 animals[ranD]['friends'] = friends
