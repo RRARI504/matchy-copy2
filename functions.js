@@ -9,16 +9,24 @@
  * and read every instruction carefully.
  */
 
-const { animal } = require("./data");
+//const { animal } = require("./data");
 
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-//I: an array representing animals and a string representing the name of an animal on which to perform a search.
-//O: should be the animal's Object if an animal with that name exists. Returns `null` if no animal with that name exists
+//I: an array representing animals and a string representing the name of 
+//an animal on which to perform a search.
+//O: should be the animal's Object if an animal with that name exists. 
+//Returns `null` if no animal with that name exists
 
 
-function search(array, string){
+function search(animals, string){
+    for(var i = 0; i < animals.length; i++){//iterate through the forloop
+        if(animals[i].name === string){//if the current iterations name is equal to the string
+            return animals[i];//returns the animals object name instanly
+        }
+    }
+    return null;//else return null
 
 }
 
@@ -26,7 +34,9 @@ function search(array, string){
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+function replace(animals, name, replacement){
 
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
