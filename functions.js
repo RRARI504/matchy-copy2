@@ -50,10 +50,7 @@ function remove(animals, name){
      for(var i = 0; i < animals.length; i++){
         if(animals[i].name === name){
             animals.splice(animals[i], 1)
-
         }
-        
-
      }
 
 };
@@ -62,7 +59,22 @@ function remove(animals, name){
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+function add(animals, animal){
+    if(animal.hasOwnProperty('name') && animal.name.length > 0){
+        return;
+    }
+    if(animal.hasOwnProperty('species') && animal.species.length > 0){
+        return;
+    }
+    for(var i = 0; i < animals.length; i++){
+        if(animals[i].name === animal.name){
+            return;
+        }
+    }
 
+    animals.push(animal);
+
+}
 
 /**
  * You did it! You're all done with Matchy!
