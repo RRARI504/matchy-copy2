@@ -60,19 +60,12 @@ function remove(animals, name){
 //////////////////////////////////////////////////////////////////////
 
 function add(animals, animal){
-    if(animal.hasOwnProperty('name') && animal.name.length > 0){
-        return;
-    }
-    if(animal.hasOwnProperty('species') && animal.species.length > 0){
-        return;
-    }
-    for(var i = 0; i < animals.length; i++){
-        if(animals[i].name === animal.name){
-            return;
-        }
-    }
+    if(animal.name > 0){
+        //animal.name checks the animal object for a 'name' property
 
-    animals.push(animal);
+    }
+    
+   
 
 }
 
