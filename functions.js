@@ -60,13 +60,27 @@ function remove(animals, name){
 //////////////////////////////////////////////////////////////////////
 
 function add(animals, animal){
-    if(animal.name > 0){
-        //animal.name checks the animal object for a 'name' property
-
+    if (!animal.name || animal.name.length === 0) {
+        return;
+        //!animal.name checks if animal name prop is undefined or null OR
+        // animal.name.length === 0 checks if name prop is an empty string
+      
     }
     
-   
+    if (!animal.species || animal.species.length === 0) {
+        return;
+        //!animal.species checks if animal species prop is undefined or null OR
+        // animal.species.length === 0 checks if species prop is an empty string
+    }
+    
+    // Use the 'search' function to check if an animal with the same name already exists
+    if (search(animals, animal.name)) {
+        return;
+        //passed in the animals array and the target which is animal.name
+    }
 
+    // If all conditions pass, add the animal to the animals array
+    animals.push(animal);
 }
 
 /**
